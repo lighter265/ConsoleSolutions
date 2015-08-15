@@ -1,0 +1,2 @@
+# ConsoleSolutions
+Console Application
