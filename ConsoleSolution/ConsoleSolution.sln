@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSolution", "ConsoleS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeIQ1621", "CodeIQ1621\CodeIQ1621.csproj", "{24F5CC3A-0501-4BE4-9D9D-98620FCB269F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeIQ1597", "CodeIQ1597\CodeIQ1597.csproj", "{B4FF8A7A-A22F-47C6-8B74-876BE67A4B19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{24F5CC3A-0501-4BE4-9D9D-98620FCB269F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24F5CC3A-0501-4BE4-9D9D-98620FCB269F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24F5CC3A-0501-4BE4-9D9D-98620FCB269F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4FF8A7A-A22F-47C6-8B74-876BE67A4B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4FF8A7A-A22F-47C6-8B74-876BE67A4B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4FF8A7A-A22F-47C6-8B74-876BE67A4B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4FF8A7A-A22F-47C6-8B74-876BE67A4B19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
