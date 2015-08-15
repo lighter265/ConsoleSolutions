@@ -6,12 +6,28 @@ using System.Threading.Tasks;
 
 namespace ConsoleSolution
 {
-    class Program
+    public class InputValues
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("test.");
-            Console.WriteLine("test.");
+            
+        }
+
+        public InputValues()
+        {
+
+        }
+        
+
+        /// <summary>
+        /// デリミタ区切りの入力は配列に分割して返す
+        /// </summary>
+        /// <param name="d"></param>
+        /// <returns></returns>
+        public static string[] getStrings(char d)
+        {
+            return Console.ReadLine().Split(d);
         }
     }
+
 }
