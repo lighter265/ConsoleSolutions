@@ -10,7 +10,9 @@ namespace ConsoleSolution
     {
         static void Main(string[] args)
         {
-            
+            //List<string> x = new List<string>();
+
+            //List<double> y = x.ConvertAll(n => double.Parse)
         }
 
         public InputValues()
@@ -28,6 +30,20 @@ namespace ConsoleSolution
         {
             return Console.ReadLine().Split(d);
         }
+        
+        public static List<string> getInput()
+        {
+            var input = new List<string>();
+            string line;
+            do
+            {
+                line = Console.ReadLine();
+                if (line == null || line == "") break;
+                input.Add(line);
+            } while (true);
+
+            return input;
+        } 
     }
 
 }

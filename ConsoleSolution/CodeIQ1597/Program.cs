@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Diagnostics;
+using ConsoleSolution;
 
 namespace CodeIQ1597
 {
@@ -9,14 +9,16 @@ namespace CodeIQ1597
     {
         static void Main(string[] args)
         {
-            var input = new List<string>();
-            string line;
-            do
-            {
-                line = Console.ReadLine();
-                if (line == null || line == "") break;
-                input.Add(line);
-            } while (true);
+            //var input = new List<string>();
+            //string line;
+            //do
+            //{
+            //    line = Console.ReadLine();
+            //    if (line == null || line == "") break;
+            //    input.Add(line);
+            //} while (true);
+
+            var input = InputValues.getInput();
 
             var answer = Enumerable.Range(1, input[0].Split(',').Length+1).ToList();
 
