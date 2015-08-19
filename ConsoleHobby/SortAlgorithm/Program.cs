@@ -11,44 +11,46 @@ namespace SortAlgorithm
     {
         static void Main(string[] args)
         {
-            int size = 10;
+            int size = 500;
             int[] list = new int[size];
             Random r = new Random(DateTime.Now.Millisecond);
             for(int i = 0; i < size; i++)
             {
-                list[i] = (r.Next() % size);
+                list[i] = (r.Next() % (size*2));
             }
 
             foreach(var item in list)
             {
-                Debug.Write(item + " ");
+                Console.Write(item + " ");
             }
-            Debug.WriteLine("");
+            Console.WriteLine("");
 
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
-            var asced = Sort.Selection(list, Sort.OrderType.Asc);
-            Debug.WriteLine("Asced.");
+            var asced = Sort.Bucket(list, Sort.OrderType.Asc);
+            Console.WriteLine("Asced.");
             foreach (var item in asced)
             {
-                Debug.Write(item + " ");
+                Console.Write(item + " ");
             }
-            Debug.WriteLine("");
+            Console.WriteLine("");
 
-            Debug.WriteLine(sw.Elapsed);
+            Console.WriteLine(sw.Elapsed);
 
-            var desced = Sort.Selection(list, Sort.OrderType.Desc);
-            Debug.WriteLine("Desced.");
+            var desced = Sort.Bucket(list, Sort.OrderType.Desc);
+            Console.WriteLine("Desced.");
             foreach (var item in desced)
             {
-                Debug.Write(item + " ");
+                Console.Write(item + " ");
             }
-            Debug.WriteLine("");
+            Console.WriteLine("");
 
-            Debug.WriteLine(sw.Elapsed);
+            Console.WriteLine(sw.Elapsed);
 
             sw.Stop();
+
+            Console.ReadKey();
         }
     }
 
@@ -56,6 +58,13 @@ namespace SortAlgorithm
     {
         public  enum OrderType { Asc, Desc };
 
+        /// <summary>
+        /// バブルソート
+        /// </summary>
+        /// <typeparam name="Type"></typeparam>
+        /// <param name="list"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
         public static Type[] Bubble<Type>(Type[] list, OrderType type)
             where Type : IComparable
         {
@@ -79,22 +88,66 @@ namespace SortAlgorithm
             return list;
         }
 
+
+        /// <summary>
+        /// 選択ソート
+        /// </summary>
+        /// <typeparam name="Type"></typeparam>
+        /// <param name="list"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
         public static Type[] Selection<Type>(Type[] list, OrderType type)
             where Type : IComparable
         {
-            for(int i = 0; i < list.Length; i++)
+            for(int i = 0; i < list.Length-1; i++)
             {
-                Type temp = list[i];
                 int tposi = i;
-                for(int j = i+1; j < list.Length; j++)
+                for(int j=i+1;j<list.Length;j++)
                 {
-                    if (!Compare(temp, list[j], type)) tposi = j;
+                    int judge = list[i].CompareTo(list[j]);
+                    judge *= (type == OrderType.Asc) ? 1 : -1;
+                    if (judge > 0) tposi = j;
                 }
-                if (!temp.Equals(list[i])) Swap(ref list[i], ref list[tposi]);
+                if (i != tposi) Swap(ref list[i], ref list[tposi]);
             }
 
             return list;
         }
+
+        /// <summary>
+        /// バケットソート
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static int[] Bucket(int[] list, OrderType  type)
+        {
+            int max = list.Max()+1;
+            int[] tmp = new int[max];
+
+            //tmp配列を０で初期化
+            for (int i = 0; i < tmp.Length; i++) tmp[i] = 0;
+
+            //list配列の数値を
+            for (int i = 0; i < list.Length; i++) tmp[list[i]]++;
+
+            var ret = new List<int>();
+            for (int i = 0; i < tmp.Length; i++)
+            {
+                for(int j = 0; j < tmp[i]; j++)
+                {
+                    ret.Add(i+1);
+                }
+            }
+
+            var fin = ret.ToArray<int>();
+
+            if (type == OrderType.Desc) Array.Reverse(fin);
+
+            return fin;
+
+        }
+
 
         /// <summary>
         /// 2つの比較可能オブジェクトを比較する。
