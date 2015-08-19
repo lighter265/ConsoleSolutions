@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHobby", "ConsoleHobby\ConsoleHobby.csproj", "{23A021CA-6D63-4B15-B8B1-96F3B33DCD39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "makeMaze", "makeMaze\makeMaze.csproj", "{FBABA6DA-09C5-452F-A506-5E9EAA618D00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithm", "SortAlgorithm\SortAlgorithm.csproj", "{5E9A6BC3-06AD-4BDC-954D-4B61B79638AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23A021CA-6D63-4B15-B8B1-96F3B33DCD39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23A021CA-6D63-4B15-B8B1-96F3B33DCD39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23A021CA-6D63-4B15-B8B1-96F3B33DCD39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23A021CA-6D63-4B15-B8B1-96F3B33DCD39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBABA6DA-09C5-452F-A506-5E9EAA618D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBABA6DA-09C5-452F-A506-5E9EAA618D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBABA6DA-09C5-452F-A506-5E9EAA618D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBABA6DA-09C5-452F-A506-5E9EAA618D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E9A6BC3-06AD-4BDC-954D-4B61B79638AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E9A6BC3-06AD-4BDC-954D-4B61B79638AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E9A6BC3-06AD-4BDC-954D-4B61B79638AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E9A6BC3-06AD-4BDC-954D-4B61B79638AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
