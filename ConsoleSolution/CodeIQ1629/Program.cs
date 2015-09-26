@@ -35,7 +35,7 @@ namespace CodeIQ1629
             else Console.WriteLine("{0}..{1}", lower + 1, upper);
         }
 
-        public static List<string> GetInputByList()
+        public static List<string> GetInputAsList()
         {
             var input = new List<string>();
             string line;

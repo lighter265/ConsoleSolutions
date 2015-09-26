@@ -13,7 +13,7 @@ namespace ConsoleSolution
             return Console.ReadLine().Split(d);
         }
 
-        public static List<string> GetInputByList()
+        public static List<string> GetInputAsList()
         {
             var input = new List<string>();
             string line;
@@ -27,7 +27,7 @@ namespace ConsoleSolution
             return input;
         }
 
-        public static string[] GetInputByArray()
+        public static string[] GetInputAsArray()
         {
             var input = new List<string>();
             string line;
